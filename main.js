@@ -33,7 +33,7 @@ Vue.component("showGoods", {
         <li class="showGoods">
             <p>名称：{{ goods.name }}</p>
             <span>￥{{ goods.price }}</span>
-            <button @click="putInCart">加入购物车</button>
+            <button class="button" @click="putInCart">加入购物车</button>
         </li>
     `,
     methods:{
@@ -66,13 +66,13 @@ Vue.component("putInCart", {
             <td><input type="checkbox" v-model="goods.selected"></td>
             <td>{{ goods.name }}</td>
             <td class="amountChange">
-                <button @click="goods.amount>1 ? goods.amount-- : null">-</button>
+                <span class="minusAmountBtn" @click="goods.amount>1 ? goods.amount-- : null">-</span>
                 <span>{{ goods.amount }}</span>
-                <button @click="goods.amount++">+</button>
+                <span class="addAmountBtn" @click="goods.amount++">+</span>
             </td>
             <td>￥{{ goods.price }}</td>
             <td>￥{{ goods.amount * goods.price }}</td>
-            <td><button @click="deleteButton">删除</button></td>
+            <td><button class="button" @click="deleteButton">删除</button></td>
         </tr>
     `,
     methods: {
