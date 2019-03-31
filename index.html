@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>购物车</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div>
+        <!-- 商品展示列表 -->
+        <div id="goodsList">
+            <header class="header">商品列表</header>
+            <ul id="goodsUl">
+                <li is="showGoods" v-for="goods in allGoods" :goods="goods" :key="goods.id"></li>
+            </ul>
+        </div>
+        <!-- 购物车 -->
+        <div id="shoppingCart">
+            <header class="header">购物车</header>
+            <table id="cartTable">
+                <!-- 字段名称 -->
+                <thead>
+                    <td id="theadCheckbox">
+                        <input type="checkbox" v-model="selectAllSelected">
+                        全选
+                    </td>
+                    <td id="theadName">商品</td>
+                    <td id="theadAmount">数量</td>
+                    <td id="theadPrice">单价</td>
+                    <td id="theadTotal">金额</td>
+                    <td id="theadDelete"></td>
+                </thead>
+                <!-- 购物车列表组件 -->
+                <tr v-if="goodsInCart"
+                    is="putInCart" 
+                    v-for="goods in goodsInCart" 
+                    :goods="goods" 
+                    :key="goods.id"
+                ></tr>
+                <!-- 空车提示 -->
+                <tr id="emptyTip" v-show="goodsInCart == false">
+                    <td colspan="6">购物车是空的</td>
+                </tr>
+                <tr>
+                    <td colspan="6" id="footerTd">
+                        <button id="deleteSelected" @click="deleteSelected">删除已选商品</button>
+                        <span id="totalSpan">已选 {{ totalAmount[0] }} 件商品总计：￥{{ totalAmount[1] }}</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

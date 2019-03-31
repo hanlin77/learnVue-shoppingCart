@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* 内容区域 */
+body>div {
+    width: 850px;
+    margin: 40px auto;
+}
+
+#goodsList, #shoppingCart {
+    min-height: 200px;
+    float: left;
+    border: solid 1px #888;
+    margin: 0 10px;
+    text-align: center;
+}
+#goodsList {
+    width: 240px;
+}
+#shoppingCart {
+    width: 560px;
+}
+/* 标题 */
+.header {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #eee;
+}
+
+/* 商品展示列表 */
+#goodsUl {
+    margin: 10px;
+    padding: 0;
+    text-align: left;
+}
+.showGoods {
+    list-style: none;
+    border: solid 1px #ddd;
+    margin: 5px 0;
+    padding: 0 10px 10px 10px;
+}
+.showGoods p {
+    margin: 10px 0;
+}
+.showGoods button {
+    float: right;
+}
+
+/* 购物车表格布局 */
+#cartTable {
+    width: 550px;
+    margin: 10px 5px;
+}
+#theadCheckbox {
+    width: 12%;
+    padding: 10px 0;
+}
+#theadName {
+    width: 20%;
+}
+#theadAmount {
+    width: 16%;
+}
+#theadPrice {
+    width: 12%;
+}
+#theadTotal {
+    width: 14%;
+}
+#theadDelete {
+    width: 12%;
+}
+input {
+    transform: scale(1.3);
+}
+.goodsInCart td {
+    padding: 10px 0;
+}
+
+/* 空车提示 */
+#emptyTip td {
+    font-size: 14px;
+    color: #aaa;
+    padding-top: 20px;
+}
+/* 底部删除按钮和总计 */
+#deleteSelected {
+    float: left;
+    margin-left: 20px;
+}
+#totalSpan {
+    float: right;
+    margin-right: 20px;
+}
+#footerTd {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+/* 更改数量按钮 */
+.amountChange button {
+    width: 22px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    padding: 0;
+}
