@@ -27,7 +27,7 @@ var allGoods = [
 var goodsInCart = [];
 
 //商品展示列表
-Vue.component("showGoods", {
+Vue.component("show-goods", {
     props: ["goods"],
     template: `
         <li class="showGoods">
@@ -59,7 +59,7 @@ new Vue({
 
 //加入购物车
 
-Vue.component("putInCart", {
+Vue.component("put-in-cart", {
     props: ["goods"],
     template: `
         <tr class="goodsInCart">

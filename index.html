@@ -14,7 +14,7 @@
         <div id="goodsList">
             <header class="header">商品列表</header>
             <ul id="goodsUl">
-                <li is="showGoods" v-for="goods in allGoods" :goods="goods" :key="goods.id"></li>
+                <li is="show-goods" v-for="goods in allGoods" :goods="goods" :key="goods.id"></li>
             </ul>
         </div>
         <!-- 购物车 -->
@@ -35,7 +35,7 @@
                 </thead>
                 <!-- 购物车列表组件 -->
                 <tr v-if="goodsInCart"
-                    is="putInCart" 
+                    is="put-in-cart" 
                     v-for="goods in goodsInCart" 
                     :goods="goods" 
                     :key="goods.id"
